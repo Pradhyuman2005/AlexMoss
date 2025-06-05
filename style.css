@@ -1,0 +1,483 @@
+.cursor {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      background-color: rgba(106, 106, 106, 0.6);
+      border-radius: 50%;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      z-index: 9999;
+      transition: transform 0.1s linear;
+}
+
+.highlight {
+    background-color: transparent;
+    color: white;
+    font-weight: normal;
+    transition: background-color 0.6s ease, color 0.6s ease, font-weight 0.6s ease;
+}
+
+/* Class that will be added on scroll */
+.highlight.active {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    font-weight: bold;
+}
+
+body {
+    text-align: center;
+    background-color: gray;
+    overflow-x: hidden;
+    font-family: "Rowdies", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+    background: linear-gradient(180deg, #000000 0%, #0e0e0e 38%, #403F3F 74%, #4E4D4D 84%, #000000 100%);
+}
+
+nav {
+    display: flex;
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+    z-index: 9999;
+    justify-content: center;
+    background-color: #D9D9D9;
+    margin-left: 700px;
+    margin-right: 700px;
+    width: 25%;
+    border-radius: 25px;
+}
+
+nav a {
+    margin-top: 6px;
+    margin-bottom: 6px;
+    margin-left: 27px;
+    margin-right: 27px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #000000;
+    transition: color 0.5s ease;
+    padding-left:  10px;
+    padding-right: 19px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+nav a:hover {
+    position: relative;
+    color: #ffffff; 
+    font-weight: bold;
+    background-color: #000000;
+    transform: scale(1.05);
+    border-radius: 11px;
+}
+
+nav:nth-child(1) {
+    padding-left:  10px;
+    padding-right: 19px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+h1 {
+    font-size: 270px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: white;
+}
+
+.container {
+   display: flex;
+}
+
+h2, h3 {
+    transform: rotateZ(-90deg);
+    transform-origin: center;
+    color: white;
+    height:fit-content;
+    width:fit-content;
+    font-size: 80px;
+    margin:0;
+}
+#Gallery .heading{
+   display: flex;
+   justify-content: center;
+   margin:0;
+   align-items: center;
+   width:5%;
+}
+
+#About .about-head{
+    display: flex;
+   justify-content: center;
+   margin:0;
+   align-items: center;
+   width:5%;
+}
+
+.contact-head{
+   display: flex;
+   justify-content: center;
+   margin:0;
+   align-items: center;
+   width:5%;
+}
+
+article {
+    margin-top: 224px;
+    text-align: left;
+    margin-left: 50px;
+    color: white;
+}
+
+.About img {
+    border-radius: 30px;
+}
+
+.About {
+    display: flex;
+    margin-top:10px;
+}
+
+#Gallery {
+    display: flex;
+    margin-top: 300px;
+    background: linear-gradient(90deg, rgb(0, 0, 0) 0%, #2E2E2E 32%, #343434 91%);
+    border-radius: 30px;
+}
+
+#Gallery img {
+     border-radius: 30px;
+     object-fit: cover;
+     margin: 20px 0;
+}
+#Gallery .home-decor img {
+    margin: 10px 0;
+}
+#Gallery .office-flex img:last-child, #Gallery .office-flex img:nth-child(2){
+    margin-left:20px;
+    width:40%;
+}
+.home-decor img{
+    opacity: .2;
+    margin-left:20px;
+    width:90%;
+}
+
+.home-decor img:hover {
+    opacity: 1;
+    transition: ease .4s;
+    transform: scale(1.08);
+}
+
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 90%;
+  margin-left: 20px;
+}
+
+.image-wrapper img {
+  width: 100%;
+  opacity: 0.5;
+  display: block;
+  transition: opacity 0.4s ease;
+  border-radius: 30px;
+}
+
+.image-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  opacity: 1;
+}
+
+.image-wrapper:hover .image-text {
+  opacity: 0;
+}
+
+.image-wrapper:hover img {
+  opacity: 1;
+}
+
+.office-flex {
+    display: flex;
+    flex-wrap:wrap;
+    width: 60%;
+    justify-content: center;
+}
+
+.office-flex img{
+    opacity: .5;
+}
+
+.office-flex img:hover {
+    opacity: 1;
+    transition: ease .4s;
+    transform: scale(1.08);
+}
+
+.office-flex img:first-child {
+    width:90%;
+}
+.home-decor {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0px;
+    width: 40%;
+    align-items: center;
+}
+
+#Contact {
+    display: inline-flex;
+    flex-wrap: wrap;
+    padding-right: 78px;
+    margin-top: 200px;
+}
+
+#socials {
+    text-align: left;
+    font-size: 23px;
+    color: white;
+    margin-bottom: 60px;
+    margin-left: 597px;
+}
+
+.gmail {
+    display: flex;
+}
+
+.gmail img{
+    margin-top: 25px;
+}
+
+.Behance {
+    display: inline-flex;
+    margin-left:85px;
+}
+
+.Behance img {
+    margin-top: 25px;
+}
+
+.Instagram {
+    display: flex;
+    margin-left: 165px;
+}
+
+.Instagram img {
+    margin-top: 25px;
+}
+
+.Linkdin {
+    display: inline-flex;
+    margin-left: 270px;
+}
+
+.Linkdin img{
+    margin-top: 25px;
+}
+
+footer p {
+    font-size: 200px;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: white;
+    margin-left: 70px;
+}
+#test {
+    width:2679px;
+    height:2679px;
+    position: absolute;
+    z-index: -100;
+    right:-1500px;
+    bottom:-200px;
+    border-radius: 50%;
+    background: linear-gradient(0deg, rgb(0, 0, 0) 10%, rgb(94, 94, 94) 50%, rgb(255, 255, 255) 100%);
+}
+
+#second-bubble {
+    width:2679px;
+    height:2679px;
+    position: absolute;
+    z-index: -110;
+    right:700px;
+    bottom:-200px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, rgb(147, 147, 147) 0%, rgb(0, 0, 0) 86%);
+}
+
+#third-bubble {
+    width:2679px;
+    height:2679px;
+    position: absolute;
+    z-index: -110;
+    right:-1500px;
+    bottom:-2200px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, rgb(8, 8, 8) 8%, rgb(30, 30, 30) 63%, rgb(236, 236, 236) 100%);
+}
+
+@media screen and (max-width: 400px) {
+
+    .cursor {
+        display: none;
+    }
+
+    /* Body adjustments */
+    body {
+        overflow-x: hidden;
+        padding: 0 10px;
+        background: linear-gradient(180deg, #000000 0%, #343434 25%, #1b1b1b 40%, #4a4a4a 84%, #000000 100%);
+    }
+
+    /* Navigation */
+    nav {
+        width: 100%;
+        bottom: 50px;
+        margin: 0;
+        padding: 5px 0;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .gmail img {
+        margin-top: 14px;
+        margin-right: 2px;
+    }
+
+    .Behance img {
+        margin-top: 14px;
+        margin-right: 4px;
+    }
+
+    .Instagram img {
+        margin-top: 14px;
+        margin-right: 2px;
+    }
+
+    .Linkdin img {
+        margin-top: 14px;
+        margin-right: 2px;
+    }
+
+    nav a {
+        margin: 5px 10px;
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+
+    /* Headings */
+    h1 {
+        font-size: 73px;
+        margin: 20px 0;
+    }
+
+    h2, h3 {
+        transform: none;
+        font-size: 49px;
+        text-align: center;
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    /* About Section */
+    #About .about-head {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .About {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .About img {
+        width: 100%;
+        height: auto;
+        max-width: 300px;
+    }
+
+    article {
+        margin: 20px 0;
+        text-align: left;
+        font-size: 16px;
+    }
+
+    /* Gallery Section */
+    #Gallery {
+        flex-direction: column;
+        margin-top: 50px;
+        padding: 10px;
+    }
+
+    #Gallery .heading {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .office-flex, .home-decor {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #Gallery img, .office-flex img, .home-decor img {
+        width: 100%;
+        max-width: 300px;
+        margin: 10px 0;
+    }
+
+    /* Contact Section */
+    #Contact {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+        padding: 0;
+    }
+
+    .contact-head {
+        width: 100%;
+        justify-content: center;
+    }
+
+    #socials {
+        margin: 20px 0;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .gmail, .Behance, .Instagram, .Linkdin {
+        margin: 10px 0;
+        justify-content: center;
+    }
+
+    .Behance, .Instagram, .Linkdin {
+        margin-left: 0;
+    }
+
+    footer p {
+        font-size: 73px;
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    /* These bubbles are causing overflow, hence I had to hide this*/
+    #test, #second-bubble, #third-bubble {
+        display: none;
+    }
+}
